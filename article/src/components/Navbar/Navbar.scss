@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #000;
+    height: 50px;
+    padding-inline: 30px;
+
+    a {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: #A78343;
+        }
+    }
+}

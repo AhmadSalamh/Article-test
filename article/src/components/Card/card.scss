@@ -1,0 +1,76 @@
+$width: calc(100% / 3 - 1.5625rem);
+$width-medium: calc(100% / 2 - 1.5625rem);
+$width-small: 85%;
+$min-width-small: 300px;
+$padding: 0.625rem;
+$margin-bottom: 1.5625rem;
+$img-height: 15.625rem;
+$font-size: 1rem;
+$heading-color: #A78343;
+$heading-font-size: 1.125rem;
+$heading-margin-bottom: 0.625rem;
+$text-margin-bottom: 0.3125rem;
+$text-line-clamp: 4;
+$link-color: #A78343;
+
+.card-item {
+    width: $width;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.75rem #ccc;
+    padding: $padding;
+    margin-bottom: $margin-bottom;
+
+    @media (max-width: 991.98px) {
+        width: $width-medium;
+    }
+
+    @media (max-width: 575.98px) {
+        width: $width-small;
+        min-width: $min-width-small;
+    }
+
+    img {
+        width: 100%;
+        height: $img-height;
+        object-fit: contain;
+        background-color: #000;
+    }
+
+    h2,
+    h3,
+    p {
+        font-size: $font-size;
+        width: 95%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    h2 {
+        color: $heading-color;
+        font-size: $heading-font-size;
+        margin-bottom: $heading-margin-bottom;
+    }
+
+    h3 {
+        margin-bottom: $heading-margin-bottom;
+    }
+
+    p {
+        color: #888;
+        margin-bottom: $text-margin-bottom;
+        -webkit-line-clamp: $text-line-clamp;
+    }
+
+    a {
+        display: block;
+        color: $link-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

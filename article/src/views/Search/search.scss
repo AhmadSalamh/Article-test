@@ -1,0 +1,84 @@
+$search-max-width: 43.75rem;
+$search-margin-top: 1.5625rem;
+$search-input-width: 75%;
+$search-input-padding-start: 0.9375rem;
+$search-button-width: 25%;
+$search-element-height: 2.8125rem;
+$search-element-border: 0.0625rem solid #A78343;
+$search-element-disabled-opacity: 0.7;
+$search-fitter-margin-top: 1.5625rem;
+$search-fitter-gap: 0.9375rem;
+$search-fitter-button-width: 3.125rem;
+
+.search {
+    display: flex;
+    align-items: center;
+    margin: $search-margin-top auto 0;
+    max-width: $search-max-width;
+
+    input {
+        width: $search-input-width;
+        padding-inline-start: $search-input-padding-start;
+    }
+
+    button {
+        width: $search-button-width;
+    }
+}
+
+select,
+input,
+button {
+    height: $search-element-height;
+    outline: none;
+    border: $search-element-border;
+
+    &:disabled {
+        cursor: no-drop;
+        opacity: $search-element-disabled-opacity;
+        pointer-events: none;
+    }
+}
+
+.btn {
+    background-color: #A78343;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+        background-color: #fff;
+        color: #A78343;
+    }
+}
+
+.fitter-by {
+    margin-top: $search-fitter-margin-top;
+    display: flex;
+    justify-content: center;
+    column-gap: $search-fitter-gap;
+
+    @media (max-width: 36.055rem) {
+        flex-direction: column;
+        row-gap: $search-fitter-gap;
+
+        form,
+        select {
+            width: 100%;
+        }
+
+        form {
+            input {
+                width: 70%;
+            }
+
+            button {
+                width: 30%;
+            }
+        }
+    }
+
+    button {
+        width: $search-fitter-button-width;
+    }
+}
