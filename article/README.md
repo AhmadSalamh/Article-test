@@ -12,8 +12,7 @@ To run this project locally, you have two options: running it with Docker or run
 git clone <repository-url>
 
 2. Navigate to the project directory:
-  ```
- cd article
+cd article
 
 3. Build the Docker image:
 docker run -p 3000:3000 article:latest
